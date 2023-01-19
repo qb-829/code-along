@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ("./partials/head.ejs") %> 
+</head>
+<body>
+    <div class="d-flex flew-row col-containter">
+        <div class="d-flex flew-column col-containter">
+            <div>
+                <h1>This is a Secure Page</h1>
+            </div>
+            <div class="d-flex flew-column col-containter">
+                <h3>User's List</h3>
+                <% userData.forEach((user) => { %>
+                    <li>
+                        <%= user.id %> 
+                        <%= user.firstName %> 
+                        <%= user.lastName %> 
+                    </li>
+                <% }) %>
+
+            </div>
+            <br />
+            <form action="/logout" method="GET">
+                    <button type="submit" class="">Logout!</button>
+                </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ("./partials/head.ejs") %> 
+</head>
+<body>
+    <form action="/login" method="POST">
+        <h2>Login</h2>
+    
+        <div class="input-field">             
+            <input
+                type="text"
+                name="username"
+                id="username"
+                placeholder="Enter your username"
+                title="letters or numbers (no special characters"
+                pattern="[A-Za-z0-9]{4,12}">
+        </div>      
+        <div class="input-field">  
+            <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Enter a password"
+                title="letters or numbers (no special characters"
+                pattern="[A-Za-z0-9]{4,12}">    
+        </div>
+        <br>
+        <button class="" type="submit">LOGIN</button>
+        <br><br>
+        <p>No Account? No Problem!</p>
+        <form action="/register" method="GET">
+            <button type="submit" class="">Register Here!</button>
+        </form>
+    </form>
+
+
+</body>
+</html>
